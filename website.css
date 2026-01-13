@@ -1,0 +1,248 @@
+*{
+    font-family: Share Tech;
+}
+body{
+    margin: 0px;
+    background-color: black;
+}
+
+nav{
+     margin-left:15px; 
+     text-decoration: none; 
+     text-align: center;
+     display: flex;
+     gap:70px;
+}
+
+nav a{
+    color:white;
+    text-decoration: none;
+}
+#navbar-of-homepage{
+    padding-top:80px;
+    padding-left:7px;
+    font-size:28px;
+}
+
+#logocompany{
+    padding-top: 10px;
+    padding-left: 100px;
+}
+
+#landingpagecar{
+    padding-left: 270px;
+    padding-top: 5px;
+}
+
+.landing_page {
+    background-image: url('/pictures/7cc3e716130593.562a5c7b3ff78.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;        
+    background-position: center;   
+    min-height: 100vh;             
+    max-width:100vw;
+}
+
+.landing_page .inventory_nav a{
+    color: white;
+}
+
+/*The following is for adjusting the navbars of the whole website*/
+.all-navbars {
+    padding-top:80px;
+    padding-left: 250px;
+    border-radius: 14px;
+    text-align: center;
+    font-size:28px;
+    color: white;
+}
+
+
+/*The following is for the headline in the image in home page*/
+.app-headline{
+    color: #fff;
+    padding: 90px 160px ;
+    font-weight: bold;
+    font-size:28px;
+}
+
+/*The following is for the h1 in the image in home page*/
+.image-text-container > h1{
+    font-family: Share Tech;
+    color: skyblue;
+    font-weight: bold;
+    font-size: 90px;
+    padding-left: 150px;
+    padding-top: 60px;
+}
+.image-text-container{
+    display: block;
+}
+.image-container{
+    display: flex;
+}
+
+footer{
+    background-color:black;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    padding-top: 50px;
+}
+
+.footer-nav a{
+    color: skyblue;
+    padding-left: 70px;
+    text-decoration: none;
+}
+.footer-nav{
+padding-left: 40px;
+text-align: left;
+display: flex;
+}
+
+.copyright{
+    padding-left: 200px;
+    padding-bottom: 20px;
+}
+
+.social-links{
+    padding-left: 300px;
+}
+.social-links i.fa-facebook { 
+    color: #1877f2; 
+}  
+.social-links i.fa-twitter { color: #1da1f2; }
+
+/*The following is for the styling the paragraph in the div with id aboutus*/
+#aboutus > #p1{
+    color:skyblue;
+    padding-top: 60px;
+    padding-left:70px;
+    font-size:28px;
+    font-family: Share Tech;
+}
+
+
+/*The following is for the styling the paragraph in the div with id aboutus-p*/
+#aboutus > h4{
+    color:skyblue;
+    padding-left: 70px;
+    font-size:28px;
+}
+
+#aboutus > #p2{
+    color: white;
+    padding-left:70px;
+    font-size:28px;
+}
+
+.mission_vision{
+    display: flex;
+    gap:80px;
+}
+
+#mission{
+    border: 3px solid black;
+    border-radius: 10px;
+    color: black;
+    text-align: center;
+    font-size:28px;
+    margin-left: 380px;
+    width: 300px;
+    height: 280px;
+    padding-top: 40px;
+    background-color: skyblue;
+}
+
+#vision{
+    border: 3px solid black;
+    border-radius: 10px;
+    color: black;
+    font-size: 28px;
+    text-align: center;
+    width: 300px;
+    height: 280px;
+    padding-top: 40px;
+    background-color: skyblue;
+}
+
+.about-us-boxes{
+    padding-top: 40px;
+    color:white;
+    display: flex;
+    gap: 60px;
+    font-size: 20px;
+    padding-left: 450px;
+}
+.about-us-boxes img{
+    border:5px solid white;
+    border-radius: 15px;
+    background-color:white;
+    color: black;
+    width: 100px;
+    height: 100px;
+    box-shadow:5px 5px 5px 5px grey;
+}
+
+.about-us-boxes img:hover{
+    box-shadow:none;
+    transition: 0.3s ease-in-out;
+
+}
+
+.info{
+    background-color: white;
+    padding-bottom: 20px;
+}
+
+
+.about-us-boxes p{
+    text-align: center;
+    color:black
+}
+
+.contact{
+    color: white;
+
+}
+
+/*About the inventory page*/
+
+#car1{
+    width:1000px;
+    height:500px;
+}
+
+.car_image{
+    display:flex;
+    justify-content:flex-start;
+    
+}
+
+.all_images_in_inventory img{
+    width: 300px;
+    height:auto;
+}
+.all_images_in_inventory{
+    /* display: flex;
+    gap:70px;
+    padding-left: 50px; */
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    grid-template-rows:auto;
+}
+
+.luxury_cars{
+    display: flex;
+    justify-content: flex-start;
+    font-size: 50px;
+    padding-right: 900px;
+    padding-left: 0px;
+}
+#check_this_out{
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 32px;
+}
