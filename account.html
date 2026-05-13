@@ -3,136 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Account</title>
+    <title>Driveway — Account</title>
     <link rel="stylesheet" href="website.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@200..800&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+80s+Fade&family=Share+Tech&display=swap" rel="stylesheet">
-    <style>
-        *{
-            font-family: Share Tech;
-        }
-        body{
-            margin: 0px;
-            background-color: black;
-        }
-        input,select,button{
-            font-family:inherit;
-            font-size:inherit;
-        }
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
+</head>
+<body>
 
-        nav{
-            margin-left:15px; 
-            text-decoration: none; 
-            text-align: center;
-            display: flex;
-            gap:70px;
-        }
-
-        nav a{
-            color:white;
-            text-decoration: none;
-        }
-    #navbar-of-homepage{
-        padding-top:80px;
-        padding-left:7px;
-        font-size:28px;
-    }
-    #logocompany{
-        padding-top: 10px;
-        padding-left: 100px;
-    }
-
-    #landingpagecar{
-        padding-left: 270px;
-        padding-top: 5px;
-    }
-
-    .landing_page {
-        background-image: url('/pictures/7cc3e716130593.562a5c7b3ff78 copy.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;        /* Makes image cover the whole section */
-        background-position: center;   /* Keeps image centered */
-        min-height: 100vh;              /* Full screen height */
-        max-width:100vw;
-    }
-
-
-    /*The following is for adjusting the navbars of the whole website*/
-    .all-navbars {
-        padding-top:80px;
-        padding-left: 250px;
-        border-radius: 14px;
-        text-align: center;
-        font-size:28px;
-        color: white;
-    }
-
-    form input{
-        color:white;
-        width:20vw;
-        padding:10px 2px;
-        border-radius:5px;
-        margin:10px 0px;
-        background-color:transparent;
-        border:0.5px solid rgb(127, 112, 112)
-    }
-
-    form label{
-        color:white;
-    }
-    form button{
-        width:20vw;
-        background-color:rgb(45, 61, 82);
-        padding:10px;
-        border-radius:5px;
-        border:none;
-
-    }
-
-    .container{
-        display:flex;
-        gap:50px;
-        padding-left: 100px;
-
-    }
-    form input, label, select{
-        font-size:30px;
-    }
-    #signup_p{
-        color:white;
-        font-size:20px;
-    }
-
-        </style>
-    </head>
-    <body>
-            <div class="all-navbars">
-            <nav>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="home.html" class="nav-logo">
+            <img src="pictures/logo.png" alt="Driveway">
+            <span>DRIVEWAY</span>
+        </a>
+        <div class="nav-links">
             <a href="home.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="inventory.html">Inventory</a>
             <a href="contact.html">Contact</a>
-            <a href="account.html">Account</a>       
-            </nav>     
+            <a href="account.html">Account</a>
         </div>
-        
-        <div class="container">
-            <div class="left-image">
-                <img src="/pictures/P90442352_highRes_rolls-royce-announce(1).jpg" alt="my image" width="790">
-            </div>
-        <form class="form_sign_up" action="#" method="post">
-        <p id="signup_p">SIGN UP:</p>
-        <label for="fname">Name:</label><br>
-        <input type="text" name="Fullname" id="fname" placeholder=" Full name"><br>
-        <label for="telephone">Phone:</label><br>
-        <input type="tel" name="tele" id="telephone" placeholder=" +250"><br>
-        <label for="account">Account Type:</label><br>
-        <input type="text" name="account" id="account" placeholder=" Individual / Dealer"><br>
-        <label for="password">Password:</label><br>
-        <input type="password" id="password" name="pwd" placeholder=" Password"><br>
-        <button type="submit">Create Account</button>
-    </form>
+    </nav>
+
+    <!-- Account section -->
+    <div class="account-section">
+
+        <!-- Left: image -->
+        <div class="account-image">
+            <img src="pictures/P90442352_highRes_rolls-royce-announce(1).jpg" alt="Luxury Car">
         </div>
+
+        <!-- Right: form -->
+        <div class="account-form-wrap">
+            <h2>SIGN UP</h2>
+            <p>Create your Driveway account to get started.</p>
+            <form class="account-form" action="#" method="post">
+                <label for="fname">Name</label>
+                <input type="text" id="fname" name="fullname" placeholder="Full name">
+
+                <label for="telephone">Phone</label>
+                <input type="tel" id="telephone" name="phone" placeholder="+250">
+
+                <label for="account">Account Type</label>
+                <input type="text" id="account" name="account" placeholder="Individual / Dealer">
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Password">
+
+                <button type="submit">Create Account</button>
+            </form>
+        </div>
+
+    </div>
+
 </body>
 </html>

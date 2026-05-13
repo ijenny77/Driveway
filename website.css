@@ -1,248 +1,587 @@
-*{
-    font-family: Share Tech;
-}
-body{
-    margin: 0px;
-    background-color: black;
-}
-
-nav{
-     margin-left:15px; 
-     text-decoration: none; 
-     text-align: center;
-     display: flex;
-     gap:70px;
+/* ============================
+   RESET & BASE
+   ============================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Share Tech', sans-serif;
 }
 
-nav a{
-    color:white;
+body {
+    background-color: #0a0a0a;
+    color: white;
+}
+
+/* ============================
+   NAVBAR
+   ============================ */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 60px;
+    background-color: rgba(0, 0, 0, 0.97);
+    border-bottom: 1px solid rgba(135, 206, 235, 0.12);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     text-decoration: none;
 }
-#navbar-of-homepage{
-    padding-top:80px;
-    padding-left:7px;
-    font-size:28px;
+
+.nav-logo img {
+    height: 44px;
+    width: auto;
 }
 
-#logocompany{
-    padding-top: 10px;
-    padding-left: 100px;
-}
-
-#landingpagecar{
-    padding-left: 270px;
-    padding-top: 5px;
-}
-
-.landing_page {
-    background-image: url('/pictures/7cc3e716130593.562a5c7b3ff78.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;        
-    background-position: center;   
-    min-height: 100vh;             
-    max-width:100vw;
-}
-
-.landing_page .inventory_nav a{
-    color: white;
-}
-
-/*The following is for adjusting the navbars of the whole website*/
-.all-navbars {
-    padding-top:80px;
-    padding-left: 250px;
-    border-radius: 14px;
-    text-align: center;
-    font-size:28px;
-    color: white;
-}
-
-
-/*The following is for the headline in the image in home page*/
-.app-headline{
-    color: #fff;
-    padding: 90px 160px ;
-    font-weight: bold;
-    font-size:28px;
-}
-
-/*The following is for the h1 in the image in home page*/
-.image-text-container > h1{
-    font-family: Share Tech;
+.nav-logo span {
     color: skyblue;
-    font-weight: bold;
-    font-size: 90px;
-    padding-left: 150px;
-    padding-top: 60px;
+    font-size: 22px;
+    letter-spacing: 3px;
 }
-.image-text-container{
+
+.nav-links {
+    display: flex;
+    gap: 36px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: skyblue;
+}
+
+/* ============================
+   HERO (HOME PAGE)
+   ============================ */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 80px;
+    min-height: calc(100vh - 82px);
+    gap: 40px;
+}
+
+.hero-text h1 {
+    color: skyblue;
+    font-size: 96px;
+    line-height: 1;
+    margin-bottom: 16px;
+    letter-spacing: 2px;
+}
+
+.hero-text h2 {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+.hero-btn {
+    display: inline-block;
+    background-color: skyblue;
+    color: #000;
+    text-decoration: none;
+    padding: 14px 38px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.hero-btn:hover {
+    background-color: #b8e8ff;
+    transform: translateY(-2px);
+}
+
+.hero-img {
+    max-width: 52%;
+    height: auto;
+}
+
+/* ============================
+   FOOTER
+   ============================ */
+footer {
+    background-color: #000;
+    border-top: 1px solid rgba(135, 206, 235, 0.12);
+    padding: 36px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-brand {
+    color: skyblue;
+    font-size: 18px;
+    letter-spacing: 3px;
+}
+
+.footer-copy {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 13px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-social a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.2s;
+}
+
+.footer-social a:hover { color: skyblue; }
+.footer-social a .fa-facebook:hover { color: #1877f2; }
+.footer-social a .fa-twitter:hover  { color: #1da1f2; }
+
+/* ============================
+   ABOUT PAGE - SERVICES
+   ============================ */
+.services-section {
+    text-align: center;
+    padding: 80px 60px;
+}
+
+.services-section h1 {
+    font-size: 42px;
+    color: #fff;
+    border-bottom: 3px solid skyblue;
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.service-card {
+    background-color: skyblue;
+    width: 160px;
+    height: 160px;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 24px rgba(135, 206, 235, 0.45);
+}
+
+.service-card i {
+    font-size: 38px;
+    margin-bottom: 12px;
+    color: #000;
+}
+
+.service-card span {
+    font-size: 15px;
+    font-weight: bold;
+    color: #000;
+}
+
+/* ============================
+   ABOUT PAGE - STATS
+   ============================ */
+.stats-section {
+    background-color: #fff;
+    padding: 60px 40px;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 12px;
+    margin-bottom: 14px;
+}
+
+.stat-item p {
+    font-size: 18px;
+    color: #111;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+/* ============================
+   CONTACT PAGE
+   ============================ */
+.contact-section {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 80px 40px;
+    display: flex;
+    gap: 80px;
+    align-items: flex-start;
+}
+
+.contact-left h1,
+.contact-right h1 {
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 14px;
+    color: #fff;
+}
+
+.contact-left p {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 32px;
+}
+
+.contact-form input {
+    display: block;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    color: white;
+    font-size: 16px;
+    padding: 12px 4px;
+    width: 100%;
+    margin-bottom: 24px;
+    transition: border-color 0.2s;
+}
+
+.contact-form input:focus {
+    outline: none;
+    border-bottom-color: skyblue;
+}
+
+.contact-form input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.contact-form button {
+    background-color: skyblue;
+    color: #000;
+    border: none;
+    padding: 12px 44px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.contact-form button:hover {
+    background-color: #b8e8ff;
+    transform: translateY(-1px);
+}
+
+.contact-right p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.65);
+    margin-bottom: 10px;
+    line-height: 1.7;
+}
+
+.contact-right h2 {
+    font-size: 20px;
+    color: rgba(255,255,255,0.4);
+    font-weight: 400;
+    margin: 24px 0 8px;
+    letter-spacing: 1px;
+}
+
+.contact-social {
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.contact-social a svg {
+    fill: rgba(255, 255, 255, 0.5);
+    transition: fill 0.2s;
+}
+
+.contact-social a:hover svg {
+    fill: skyblue;
+}
+
+/* ============================
+   ACCOUNT PAGE
+   ============================ */
+.account-section {
+    display: flex;
+    min-height: calc(100vh - 82px);
+}
+
+.account-image {
+    flex: 1;
+    overflow: hidden;
+}
+
+.account-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.account-form-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 70px;
+}
+
+.account-form-wrap h2 {
+    font-size: 30px;
+    color: white;
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+}
+
+.account-form-wrap p {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
+.account-form label {
+    display: block;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 13px;
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+}
+
+.account-form input {
+    display: block;
+    width: 100%;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    padding: 12px 14px;
+    margin-bottom: 22px;
+    transition: border-color 0.2s;
+}
+
+.account-form input:focus {
+    outline: none;
+    border-color: skyblue;
+}
+
+.account-form input::placeholder {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.account-form button {
+    width: 100%;
+    background-color: skyblue;
+    color: #000;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+    margin-top: 6px;
+}
+
+.account-form button:hover {
+    background-color: #b8e8ff;
+    transform: translateY(-1px);
+}
+
+/* ============================
+   INVENTORY PAGE
+   ============================ */
+.inventory-hero {
+    background-image: url('pictures/7cc3e716130593.562a5c7b3ff78.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 60px 60px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.inventory-hero h1 {
+    font-size: 52px;
+    color: white;
+    letter-spacing: 5px;
+    text-shadow: 0 2px 24px rgba(0, 0, 0, 0.9);
+}
+
+.inventory-section {
+    padding: 50px 60px;
+}
+
+.inventory-section h2 {
+    color: white;
+    text-align: center;
+    font-size: 26px;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    margin-bottom: 40px;
+}
+
+.inventory-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.inventory-card {
+    background-color: #111;
+    border: 1px solid rgba(135, 206, 235, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.inventory-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(135, 206, 235, 0.15);
+}
+
+.inventory-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    background-color: #0d0d0d;
+    padding: 14px;
     display: block;
 }
-.image-container{
-    display: flex;
-}
 
-footer{
-    background-color:black;
-    font-size: 30px;
+
+/* ============================
+   RESPONSIVE
+   ============================ */
+
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+
+  /* Navbar */
+  .navbar {
+    padding: 14px 24px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .nav-links {
+    gap: 20px;
+  }
+
+  /* Hero */
+  .hero {
+    flex-direction: column;
+    padding: 40px 24px;
     text-align: center;
-    color: white;
-    padding-top: 50px;
+  }
+  .hero-text h1 { font-size: 56px; }
+  .hero-text h2 { font-size: 18px; }
+  .hero-img {
+    max-width: 100%;
+  }
+
+  /* Services */
+  .services-section { padding: 60px 24px; }
+
+  /* Stats */
+  .stats-section {
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 40px 24px;
+  }
+
+  /* Contact */
+  .contact-section {
+    flex-direction: column;
+    gap: 40px;
+    padding: 60px 24px;
+  }
+
+  /* Account */
+  .account-section { flex-direction: column; }
+  .account-image { max-height: 260px; }
+  .account-form-wrap { padding: 40px 24px; }
+
+  /* Inventory */
+  .inventory-hero { padding: 60px 24px 40px; }
+  .inventory-hero h1 { font-size: 36px; }
+  .inventory-section { padding: 40px 24px; }
+  .inventory-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-.footer-nav a{
-    color: skyblue;
-    padding-left: 70px;
-    text-decoration: none;
-}
-.footer-nav{
-padding-left: 40px;
-text-align: left;
-display: flex;
-}
-
-.copyright{
-    padding-left: 200px;
-    padding-bottom: 20px;
-}
-
-.social-links{
-    padding-left: 300px;
-}
-.social-links i.fa-facebook { 
-    color: #1877f2; 
-}  
-.social-links i.fa-twitter { color: #1da1f2; }
-
-/*The following is for the styling the paragraph in the div with id aboutus*/
-#aboutus > #p1{
-    color:skyblue;
-    padding-top: 60px;
-    padding-left:70px;
-    font-size:28px;
-    font-family: Share Tech;
-}
 
 
-/*The following is for the styling the paragraph in the div with id aboutus-p*/
-#aboutus > h4{
-    color:skyblue;
-    padding-left: 70px;
-    font-size:28px;
-}
 
-#aboutus > #p2{
-    color: white;
-    padding-left:70px;
-    font-size:28px;
-}
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
 
-.mission_vision{
-    display: flex;
-    gap:80px;
-}
+  /* Navbar */
+  .nav-links {
+    gap: 14px;
+    font-size: 14px;
+  }
 
-#mission{
-    border: 3px solid black;
-    border-radius: 10px;
-    color: black;
+  /* Hero */
+  .hero-text h1 { font-size: 40px; }
+
+  /* Services */
+  .service-card {
+    width: 130px;
+    height: 130px;
+  }
+
+  /* Stats */
+  .stats-section { flex-direction: column; align-items: center; }
+
+  /* Contact */
+  .contact-left h1,
+  .contact-right h1 { font-size: 32px; }
+
+  /* Inventory */
+  .inventory-grid { grid-template-columns: 1fr; }
+
+  /* Footer */
+  footer {
+    flex-direction: column;
     text-align: center;
-    font-size:28px;
-    margin-left: 380px;
-    width: 300px;
-    height: 280px;
-    padding-top: 40px;
-    background-color: skyblue;
-}
-
-#vision{
-    border: 3px solid black;
-    border-radius: 10px;
-    color: black;
-    font-size: 28px;
-    text-align: center;
-    width: 300px;
-    height: 280px;
-    padding-top: 40px;
-    background-color: skyblue;
-}
-
-.about-us-boxes{
-    padding-top: 40px;
-    color:white;
-    display: flex;
-    gap: 60px;
-    font-size: 20px;
-    padding-left: 450px;
-}
-.about-us-boxes img{
-    border:5px solid white;
-    border-radius: 15px;
-    background-color:white;
-    color: black;
-    width: 100px;
-    height: 100px;
-    box-shadow:5px 5px 5px 5px grey;
-}
-
-.about-us-boxes img:hover{
-    box-shadow:none;
-    transition: 0.3s ease-in-out;
-
-}
-
-.info{
-    background-color: white;
-    padding-bottom: 20px;
-}
-
-
-.about-us-boxes p{
-    text-align: center;
-    color:black
-}
-
-.contact{
-    color: white;
-
-}
-
-/*About the inventory page*/
-
-#car1{
-    width:1000px;
-    height:500px;
-}
-
-.car_image{
-    display:flex;
-    justify-content:flex-start;
-    
-}
-
-.all_images_in_inventory img{
-    width: 300px;
-    height:auto;
-}
-.all_images_in_inventory{
-    /* display: flex;
-    gap:70px;
-    padding-left: 50px; */
-    display:grid;
-    grid-template-columns:repeat(4, 1fr);
-    grid-template-rows:auto;
-}
-
-.luxury_cars{
-    display: flex;
-    justify-content: flex-start;
-    font-size: 50px;
-    padding-right: 900px;
-    padding-left: 0px;
-}
-#check_this_out{
-    color: white;
-    text-align: center;
-    text-decoration: underline;
-    font-size: 32px;
+    gap: 16px;
+    padding: 24px;
+  }
 }
